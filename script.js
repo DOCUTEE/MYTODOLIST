@@ -43,9 +43,9 @@ function deleteCheck(e){
             });
       }
       
-      if (item.classList[0] === "completed-btn") {
+      if (item.classList[0] === "complete-btn") {
             const todo = item.parentElement;
-            todo.clasList.toggle("completed");
+            todo.classList.toggle("completed");
       }
 }
 
@@ -57,12 +57,12 @@ function filterTodo(e){
                         todo.style.display = "flex";
                         break;
                   case "completed":
-                        if (todo.clasList.contains("completed")){
+                        if (todo.classList.contains("completed")){
                               todo.style.display = "flex";
                         }
                         else 
                         {
-                              todo.style.display = none;
+                              todo.style.display = "none";
                         }
                         break;
                   case "incomplete":
